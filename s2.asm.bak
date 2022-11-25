@@ -3958,8 +3958,7 @@ TitleScreen_Loop:
 	or.b	(Ctrl_2_Press).w,d0
 	andi.b	#button_start_mask,d0
 	beq.w	TitleScreen_Loop ; loop until Start is pressed
-	;move.b	#GameModeID_Level,(Game_Mode).w ; => Level (Zone play mode)
-		move.b	#GameModeID_LevelSelect,(Game_Mode).w ; => LevelSelectMenu
+	move.b	#GameModeID_Level,(Game_Mode).w ; => Level (Zone play mode)
 	move.b	#3,(Life_count).w
 	move.b	#3,(Life_count_2P).w
 	moveq	#0,d0
